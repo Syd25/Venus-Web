@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("https://i.pinimg.com/originals/e2/71/fd/e271fda72f1e158b5f0569cc72d36d7f.jpg");
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2 style="color:white;">Sell Your Product</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sell</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/submitted" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="data:image/jpeg;base64,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" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Name</b></label>
+      <input type="text" placeholder="Enter Seller Name" name="uname" required>
+
+      <label for="psw"><b>Product</b></label>
+      <input type="text" placeholder="Enter Product" name="psw" required>
+
+      <label for="cat"><b>Category</b></label>
+      <input type="text" placeholder="Enter Category" name="cat" required>
+
+      <label for="sellsite"><b>Preference</b></label>
+      <input type="text" placeholder="Enter selling preference" name="psw" required>
+        
+      <button type="submit"><a href="/submitted" style="text-decoration:none;color:white;" >Sell</a></button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

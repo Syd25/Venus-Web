@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <title>INtro</title>
+       <style>
+              body{
+                background-color:#111;
+                background-image:url("https://media1.giphy.com/media/l4KihuqeuJEi9qLSM/giphy.gif");
+                background-attachment:fixed;
+                background-size: cover;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                text-align:center;
+                width:100vw;
+                overflow:hidden;
+              }
+
+              button{
+                  border-radius:30%;
+                  background-color: blue;
+                  color:white!important;
+                  margin:2px auto;
+
+              }
+
+              button a{
+                  color:white;
+              }
+              
+              .fly{
+                  font-size:7em;
+                  margin:35vh auto;
+                  height:20vh;
+                  text-align:center;
+                  color:white;
+              }
+
+              .fly span{
+                  display:block;
+                  font-size:4em;
+                  opacity:.8;
+                  text-align:center;
+                  color:white
+              }
+
+              .fly div{
+                  position:absolute;
+                  margin:2vh 0;
+                  opacity:0;
+                  left:10vw;
+                  width:80vw;
+                  animation:switch 32s linear infinite;
+              }
+
+              .fly div:nth-child(2)
+              {
+                  animation-delay: 4s;
+              }
+
+              .fly div:nth-child(3)
+              {
+                  animation-delay: 8s;
+              }
+
+              
+
+              @keyframes switch{
+                  0%{
+                      opacity:0;
+                      filter:blur(20px);
+                      transform:scale(12)
+                  }
+                  10%{
+                      opacity:1;
+                      filter:blur(0);
+                      transform:scale(0.9)
+                  }
+                  13%{
+                      opacity:0;
+                      filter:blur(10px);
+                      transform:scale(0.1)
+                  }
+                  80%{
+                      opacity:0;
+                      filter:blur(10px);
+                      transform:scale(0.1)
+                  }
+                }
+            
+       </style>
+
+
+
+
+</head>
+
+<body>
+       
+    <div class="fly">
+        <div><span>WELCOME</span><span>TO</span><span>VENUS</span></div>
+        <div><span>A</span><span>PLACE</span><span>FOR<span></div>
+        
+        <div><span>WOMEN</span></div>
+        
+    </div>
+
+    <button><a href="/index">CLICK HERE</a></button>
+
+
+
+</body>
+
+</html>

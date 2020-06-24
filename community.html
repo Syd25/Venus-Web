@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/css/community">
+        <meta name="viewport" content="width-device-width,initial-scale=1">
+        <script src=""></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="script.js"></script>
+
+        <style>
+        *{
+    background-image: url("https://img.freepik.com/free-vector/dark-wall-background_1390-191.jpg?size=338&ext=jpg");
+    background-color:#111;
+    background-attachment:fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin-top:0px;
+    text-align:center;
+}
+
+button{
+    color:white;
+}
+
+#login{
+    background-color: darkred;
+}
+
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: crimson;
+    text-align: center;
+}
+        
+        </style>
+    
+    </head>
+    <body>
+        <h1>COMMUNITY</h1>
+        <div id="login_div">
+            <input placeholder="username" type="text" id="loginbox">
+            <button id="login">LOGIN</button>
+        </div>
+        
+        <div id="chat_div" style="display:none">
+            <input placeholder="NEW MESSAGE" type="text" id="msgbox">
+            <button id="sendmsg">SEND</button>
+            <ul id="msglist"></ul>
+        </div>
+        
+    </body>
+</html>
